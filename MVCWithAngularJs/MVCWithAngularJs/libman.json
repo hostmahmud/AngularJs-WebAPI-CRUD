@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "angular-base64-upload@0.1.23",
+      "destination": "assets/lib/base64/"
+    }
+  ]
+}

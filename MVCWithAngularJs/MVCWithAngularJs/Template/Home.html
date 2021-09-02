@@ -1,0 +1,626 @@
+﻿<!--<div ng-controller="HomeController">
+    <h2>Home Page</h2>
+    <h5>{{Message}}</h5>
+    <h5>{{counts[0]}}</h5>
+</div>-->
+
+
+<div ng-controller="HomeController" class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Overview</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a href="#!/home" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Support Center</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-dark">Overview</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container">
+            <!--begin::Hero card-->
+            <div class="card mb-12">
+                <!--begin::Hero body-->
+                <div class="card-body flex-column p-5">
+                    <!--begin::Hero content-->
+                    <div class="d-flex align-items-center h-lg-300px p-5 p-lg-15">
+                        <!--begin::Wrapper-->
+                        <div class="d-flex flex-column align-items-start justift-content-center flex-equal me-5">
+                            <div class="card card-xxl-stretch" style="width: 100%;">
+                                <!--begin::Header-->
+                                <!--end::Header-->
+                                <!--begin::Body-->
+                                <div class="card-body p-0" style="position: relative;">
+                                    <!--begin::Chart-->
+                                    <!--end::Chart-->
+                                    <!--begin::Stats-->
+                                    <div class="card-p position-relative">
+                                        <!--begin::Row-->
+                                        <div class="row g-0">
+                                            <!--begin::Col-->
+                                            <div class="col bg-light-warning px-6 py-5 rounded-2 me-7 mb-7">
+                                                <!--begin::Svg Icon | path: icons/duotone/Media/Equalizer.svg-->
+                                                <span class="svg-icon svg-icon-3x svg-icon-warning my-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
+                                                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
+                                                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
+                                                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <div class="symbol symbol-50px me-0 mt-4 float-end" style="">
+                                                    <span class="symbol-label bg-warning">
+                                                        <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
+                                                        <span class="svg-icon svg-icon-2x svg-icon-success text-white display-6">
+                                                            {{counts[1]}}
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                </div>
+                                                <!--end::Svg Icon-->
+                                                <a href="#" class="text-warning fw-bold fs-6 d-block">Total Tickets</a>
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col bg-light-primary px-6 py-5 rounded-2 mb-7">
+                                                <!--begin::Svg Icon | path: icons/duotone/Communication/Add-user.svg-->
+                                                <span class="svg-icon svg-icon-3x svg-icon-primary my-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                                        <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="symbol symbol-50px me-0 mt-4 float-end" style="">
+                                                    <span class="symbol-label bg-primary">
+                                                        <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
+                                                        <span class="svg-icon svg-icon-2x svg-icon-success text-white  display-6">
+                                                            {{counts[0]}}
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                </div>
+                                                <!--end::Svg Icon-->
+                                                <a href="#" class="text-primary fw-bold fs-6 d-block">Total Users</a>
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                        <!--begin::Row-->
+                                        <div class="row g-0">
+                                            <!--begin::Col-->
+                                            <div class="col bg-light-danger px-6 py-5 rounded-2 me-7">
+                                                <!--begin::Svg Icon | path: icons/duotone/Design/Layers.svg-->
+                                                <span class="svg-icon svg-icon-3x svg-icon-danger my-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                                        <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="symbol symbol-50px me-0 mt-4 float-end" style="">
+                                                    <span class="symbol-label bg-danger">
+                                                        <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
+                                                        <span class="svg-icon svg-icon-2x svg-icon-success  text-white display-6">
+                                                            {{counts[3]}}
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                </div>
+                                                <!--end::Svg Icon-->
+                                                <a href="#" class="text-danger fw-bold fs-6 mt-2 d-block">Total Staff</a>
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col bg-light-success px-6 py-5 rounded-2">
+                                                <!--begin::Svg Icon | path: icons/duotone/Communication/Urgent-mail.svg-->
+                                                <span class="svg-icon svg-icon-3x svg-icon-success my-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <path d="M12.7037037,14 L15.6666667,10 L13.4444444,10 L13.4444444,6 L9,12 L11.2222222,12 L11.2222222,14 L6,14 C5.44771525,14 5,13.5522847 5,13 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,13 C19,13.5522847 18.5522847,14 18,14 L12.7037037,14 Z" fill="#000000" opacity="0.3"></path>
+                                                        <path d="M9.80428954,10.9142091 L9,12 L11.2222222,12 L11.2222222,16 L15.6666667,10 L15.4615385,10 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 L9.80428954,10.9142091 Z" fill="#000000"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="symbol symbol-50px me-0 mt-4 float-end" style="">
+                                                    <span class="symbol-label bg-success">
+                                                        <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
+                                                        <span class="svg-icon svg-icon-2x svg-icon-success text-white display-6">
+                                                            {{counts[2]}}
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                </div>
+                                                <!--end::Svg Icon-->
+                                                <a href="#" class="text-success fw-bold fs-6 mt-2 d-block">Ticket Solved</a>
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                    </div>
+                                    <!--end::Stats-->
+                                    <div class="resize-triggers"><div class="expand-trigger"><div style="width: 350px; height: 465px;"></div></div><div class="contract-trigger"></div></div>
+                                </div>
+                                <!--end::Body-->
+                            </div>
+                        </div>
+                        <!--end::Wrapper-->
+                        <!--begin::Wrapper-->
+                        <div class="flex-equal d-flex justify-content-center align-items-end ms-5">
+                            <!--begin::Illustration-->
+                            <img src="../../assets/media/svg/illustrations/sigma/question.svg" alt="" class="mw-100 mh-125px mh-lg-275px mb-lg-n12">
+                            <!--end::Illustration-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Hero content-->
+                    <!--begin::Hero nav-->
+                    <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
+                        <!--begin::Nav-->
+                        <ul class="nav flex-wrap border-transparent fw-bolder">
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase active" href="#!/home">Overview</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/tickets">tickets</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/team">Team Members</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/about">About Us</a>
+                            </li>
+                            <!--end::Nav item-->
+                            
+                        </ul>
+                        <!--end::Nav-->
+                        <!--begin::Action-->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_new_ticket" class="btn btn-primary fw-bolder fs-8 fs-lg-base">Create Ticket</a>
+                        <!--end::Action-->
+                    </div>
+                    <!--end::Hero nav-->
+                </div>
+                <!--end::Hero body-->
+            </div>
+            <!--end::Hero card-->
+            <!--begin::Row-->
+            <div class="row gy-0 mb-6 mb-xl-12">
+                <!--begin::Col-->
+                <div class="col-md-6">
+                    <!--begin::Card-->
+                    <div class="card card-md-stretch me-xl-3 mb-md-0 mb-6">
+                        <!--begin::Body-->
+                        <div class="card-body p-10 p-lg-15">
+                            <!--begin::Header-->
+                            <div class="d-flex flex-stack mb-7">
+                                <!--begin::Title-->
+                                <h1 class="fw-bolder text-dark">All Open Tickets</h1>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::Header-->
+                            <!--begin::Accordion-->
+                            <!--begin::Section-->
+                            <div class="m-0" ng-repeat="t in tickets | filter : OnlyOpenTickets('status','Open') | orderBy:'ticketsId':true">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_1_{{t.ticketsId}}">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">{{t.title}}</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-block">{{t.department}}</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+                                <!--begin::Body-->
+                                <div id="kt_support_1_{{t.ticketsId}}" class="collapse fs-6 ms-10">
+                                    <!--begin::Block-->
+                                    <div class="mb-4">
+                                        <!--begin::Text-->
+                                        <span class="text-muted fw-bold fs-5">{{t.body}}</span>
+                                        <!--end::Text-->
+                                        <!--begin::Link-->
+                                        <a href="#!/ticketDetails/{{t.ticketsId}}" class="fs-5 link-primary fw-bold">View Ticket</a>
+                                        <!--end::Link-->
+                                    </div>
+                                    <!--end::Block-->
+                                </div>
+                                <!--end::Content-->
+                            </div>
+                            <!--end::Body-->
+                            <!--end::Accordion-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-md-6">
+                    <!--begin::Card-->
+                    <div class="card card-md-stretch ms-xl-3">
+                        <!--begin::Body-->
+                        <div class="card-body p-10 p-lg-15">
+                            <!--begin::Header-->
+                            <div class="d-flex flex-stack mb-7">
+                                <!--begin::Title-->
+                                <h1 class="fw-bolder text-dark">FAQ</h1>
+                                <!--end::Title-->
+                                <!--begin::Section-->
+                                <div class="d-flex align-items-center">
+                                    <!--begin::Link-->
+                                    <a href="../../pages/faq/extended.html" class="text-primary fw-bolder me-1">Full FAQ</a>
+                                    <!--begin::Link-->
+                                    <!--begin::Arrow-->
+                                    <!--begin::Svg Icon | path: icons/duotone/Navigation/Arrow-right.svg-->
+                                    <span class="svg-icon svg-icon-2 svg-icon-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                <rect fill="#000000" opacity="0.5" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1"></rect>
+                                                <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                    <!--end::Arrow-->
+                                </div>
+                                <!--end::Section-->
+                            </div>
+                            <!--end::Header-->
+                            <!--begin::Accordion-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_1">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">What admin theme does?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">Metronic</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_2">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">How Extended Licese works?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">General</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_3">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">How to install on a local machine?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">Craft</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_4">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">How can I import Google fonts?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">Metronic</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_5">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">How long the license is valid?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">Start</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--begin::Section-->
+                            <div class="m-0">
+                                <!--begin::Heading-->
+                                <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0" data-bs-toggle="collapse" data-bs-target="#kt_support_2_6">
+                                    <!--begin::Icon-->
+                                    <div class="ms-n1 me-5">
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-down.svg-->
+                                        <span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M8.2928955,3.20710089 C7.90237121,2.8165766 7.90237121,2.18341162 8.2928955,1.79288733 C8.6834198,1.40236304 9.31658478,1.40236304 9.70710907,1.79288733 L15.7071091,7.79288733 C16.085688,8.17146626 16.0989336,8.7810527 15.7371564,9.17571874 L10.2371564,15.1757187 C9.86396402,15.5828377 9.23139665,15.6103407 8.82427766,15.2371482 C8.41715867,14.8639558 8.38965574,14.2313885 8.76284815,13.8242695 L13.6158645,8.53006986 L8.2928955,3.20710089 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 8.499997) scale(-1, -1) rotate(-90.000000) translate(-12.000003, -8.499997)"></path>
+                                                    <path d="M6.70710678,19.2071045 C6.31658249,19.5976288 5.68341751,19.5976288 5.29289322,19.2071045 C4.90236893,18.8165802 4.90236893,18.1834152 5.29289322,17.7928909 L11.2928932,11.7928909 C11.6714722,11.414312 12.2810586,11.4010664 12.6757246,11.7628436 L18.6757246,17.2628436 C19.0828436,17.636036 19.1103465,18.2686034 18.7371541,18.6757223 C18.3639617,19.0828413 17.7313944,19.1103443 17.3242754,18.7371519 L12.0300757,13.8841355 L6.70710678,19.2071045 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(12.000003, 15.499997) scale(-1, -1) rotate(-360.000000) translate(-12.000003, -15.499997)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-right.svg-->
+                                        <span class="svg-icon toggle-off svg-icon-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                    <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Icon-->
+                                    <!--begin::Section-->
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <!--begin::Title-->
+                                        <h3 class="text-gray-800 fw-bold cursor-pointer me-3 mb-0">How many end projects I can build?</h3>
+                                        <!--end::Title-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light my-1 d-none">Bower</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Section-->
+                                </div>
+                                <!--end::Heading-->
+
+                            </div>
+                            <!--end::Body-->
+                            <!--end::Accordion-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Card-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+            
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>

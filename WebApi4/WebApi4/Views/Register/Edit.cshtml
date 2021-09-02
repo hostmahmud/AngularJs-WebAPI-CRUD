@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div id="hockey_teams">
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="hockey-team col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="team in teams">
+                    <div class="inner">
+                        <h4>{{team.Team}}</h4>
+                        <p>First Season in NHL: {{team.Founded}}</p>
+                        <p>Stanley Cups ({{team.Stanley_Cups.length}}): {{team.Stanley_Cups}}</p>
+                        <p>Logo:</p>
+                        <img ng-src="{{team.Logo}}" border="0" alt="{{team.Team}} logo" title="{{team.Team}} logo" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

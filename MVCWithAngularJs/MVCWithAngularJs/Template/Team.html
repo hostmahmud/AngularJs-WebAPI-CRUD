@@ -1,0 +1,187 @@
+﻿<!--<div ng-controller="OrderController">
+    <h2>Order Page</h2>
+    <h5>{{Message}}</h5>
+</div>-->
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content" ng-controller="CreateTicketController">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Our Team</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a href="#!/home" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Pages</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-dark">Our Team</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+            <!--begin::Actions-->
+            <div class="d-flex align-items-center py-1">
+
+            </div>
+            <!--end::Actions-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container">
+            <!--begin::About card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-17">
+                    <!--begin::Team-->
+                    <div class="mb-18">
+                        <!--begin::Heading-->
+                        <div class="text-center mb-17">
+                            <!--begin::Title-->
+                            <h3 class="fs-2hx text-dark mb-5">Our Great Team Members</h3>
+                            <!--end::Title-->
+                            <!--begin::Sub-title-->
+                            <div class="fs-5 text-muted fw-bold">
+                                It’s no doubt that when a development takes longer to complete, additional costs to
+                                <br>integrate and test each extra feature creeps up and haunts most of us.
+                            </div>
+                            <!--end::Sub-title=-->
+                        </div>
+                        <!--end::Heading-->
+                        <!--begin::Wrapper-->
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 gy-10">
+
+                            <!--begin::Item-->
+                            <div class="col text-center mb-9" ng-repeat="u in UsersList">
+                                <!--begin::Photo-->
+                                <div class="octagon mx-auto mb-2 d-flex w-150px h-150px bgi-no-repeat bgi-size-contain bgi-position-center" style=" background: radial-gradient(#009EF7, transparent);">
+                                    <img src="../UploadedFiles/{{u.imageName}}" alt="team image" />    
+                                </div>
+                                <!--end::Photo-->
+                                <!--begin::Person-->
+                                <div class="mb-0">
+                                    <!--begin::Name-->
+                                    <a href="#!/teamDetails/{{u.id}}" class="text-warning fw-bolder text-hover-primary fs-3">
+                                        {{u.accName}}
+                                    </a>
+                                    <!--end::Name-->
+                                    <!--begin::Position-->
+                                    <div class="text-muted fs-6 fw-bold">
+                                        {{u.accPlan}} Account
+                                    </div>
+                                    <!--begin::Position-->
+                                </div>
+                                <!--end::Person-->
+                            </div>
+                            <!--end::Item-->
+
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Team-->
+                    <!--begin::Join-->
+                    <div class="text-center mb-20">
+                        <!--begin::Top-->
+                        <div class="mb-13">
+                            <!--begin::Title-->
+                            <h3 class="fs-2hx text-dark mb-5">Join Us</h3>
+                            <!--end::Title-->
+                            <!--begin::Text-->
+                            <div class="fs-5 text-muted fw-bold">
+                                Save thousands to millions of bucks by using single tool
+                                <br>for different amazing and great useful admin
+                            </div>
+                            <!--end::Text-->
+                        </div>
+                        <!--end::Top-->
+                        <!--begin::Text-->
+                        <p class="fs-5 fw-bold text-gray-600 text-start mb-15">
+                            First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words per minute and your writing skills are sharp. From the seed of the idea to finally hitting “Publish,” you might spend several days or maybe even a week “writing” a blog post, but it’s important to spend those vital hours planning
+                            <a href="../blog/post.html" class="link-primary pe-1">Your Post</a>(yes, thinking counts as working if you’re a blogger) before you actually write it.
+                        </p>
+                        <!--end::Text-->
+                        <!--begin::Action-->
+                        <a href="" class="btn btn-primary mb-5">Apply Now</a>
+                        <!--end::Action-->
+                    </div>
+                    <!--end::Join-->
+                    <!--begin::Card-->
+                    <div class="card mb-4 bg-light text-center">
+                        <!--begin::Body-->
+                        <div class="card-body py-12">
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/facebook-4.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/instagram-2-1.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/github.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/behance.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/pinterest-p.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/twitter.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                            <!--begin::Icon-->
+                            <a href="" class="mx-4">
+                                <img src="../../assets/media/svg/brand-logos/dribbble-icon-1.svg" class="h-30px my-2" alt="">
+                            </a>
+                            <!--end::Icon-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Card-->
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::About card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Register Success";
+    Layout = "~/Views/Shared/_Register.cshtml";
+}
+
+<script>
+    setTimeout(function () {
+        window.location.href = '/Home/Login';
+    }, 6000);
+</script>
+
+<!--verify email starts here-->
+<div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed" style="background-image: url(../../assets/media/illustrations/development-hd.png)">
+    <!--begin::Content-->
+    <div class="d-flex flex-column flex-column-fluid text-center p-10 py-lg-20">
+        <!--begin::Logo-->
+        <a href="" class="mb-10 pt-lg-20">
+            <img alt="Logo" src="~/assets/img/logo.png" class="h-50px mb-5">
+        </a>
+        <!--end::Logo-->
+        <!--begin::Wrapper-->
+        <div class="pt-lg-10">
+            <!--begin::Logo-->
+            <h1 class="fw-bolder fs-2qx text-gray-800 mb-7">Registration Completed</h1>
+            <!--end::Logo-->
+            <!--begin::Message-->
+            <div class="fs-3 fw-bold text-muted mb-10">
+                You have successfully completed account registration. <br />We will redirect you to login page in 5 seconds.
+                <br /><br />
+                <span class="link-primary fw-bolder">Redirecting... {{counter}}</span>
+                <br /><br />
+                <a class="btn btn-primary er fs-6 px-8 py-4 fw-bolder" href="/home/login">Redirect Now</a>
+            </div>
+            <!--end::Message-->
+
+        </div>
+        <!--end::Wrapper-->
+    </div>
+    <!--end::Content-->
+    <!--begin::Footer-->
+    <div class="d-flex flex-center flex-column-auto p-10">
+        <!--begin::Links-->
+        <div class="d-flex align-items-center fw-bold fs-6">
+            <a href="https://keenthemes.com/" class="text-muted text-hover-primary px-2">About</a>
+            <a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
+            <a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
+        </div>
+        <!--end::Links-->
+    </div>
+    <!--end::Footer-->
+</div>

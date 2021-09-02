@@ -1,0 +1,389 @@
+﻿<div ng-controller="ticketDetailsController" class="content d-flex flex-column flex-column-fluid" id="kt_content" ng-repeat="t in tdetail | filter: TicketById('ticketsId',tid)">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">View Tickets</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a href="../../../index-2.html" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Tickets</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-dark">View Ticket</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+            
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container">
+            <!--begin::Hero card-->
+            <div class="card mb-12">
+                <!--begin::Hero body-->
+                <div class="card-body flex-column p-5">
+                    <!--begin::Hero nav-->
+                    <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
+                        <!--begin::Nav-->
+                        <ul class="nav flex-wrap border-transparent fw-bolder">
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/home">Overview</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase active" href="#!/tickets">tickets</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/team">Team Members</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-white btn-active-color-primary fw-boldest fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#!/about">About Us</a>
+                            </li>
+                            <!--end::Nav item-->
+                        </ul>
+                        <!--end::Nav-->
+                        <!--begin::Action-->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_new_ticket" class="btn btn-primary fw-bolder fs-8 fs-lg-base">Create Ticket</a>
+                        <!--end::Action-->
+                    </div>
+                    <!--end::Hero nav-->
+                </div>
+                <!--end::Hero body-->
+            </div>
+            <!--end::Hero card-->
+            <!--begin::Card-->
+            <div class="card">
+                <!--begin::Card body-->
+                <div class="card-body">
+                    <!--begin::Layout-->
+                    <div class="d-flex flex-column flex-xl-row py-7">
+                        <!--begin::Content-->
+                        <div class="flex-lg-row-fluid me-xl-15 mb-20 mb-xl-0">
+                            <!--begin::Ticket view-->
+                            <div class="mb-0">
+                                <form name="frmRegister">
+                                    <!--begin::Heading-->
+                                    <div class="d-flex align-items-center mb-12">
+                                        <!--begin::Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotone/Files/File-done.svg-->
+                                        <span class="svg-icon svg-icon-4qx svg-icon-success ms-n2 me-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                                    <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z M10.875,15.75 C11.1145833,15.75 11.3541667,15.6541667 11.5458333,15.4625 L15.3791667,11.6291667 C15.7625,11.2458333 15.7625,10.6708333 15.3791667,10.2875 C14.9958333,9.90416667 14.4208333,9.90416667 14.0375,10.2875 L10.875,13.45 L9.62916667,12.2041667 C9.29375,11.8208333 8.67083333,11.8208333 8.2875,12.2041667 C7.90416667,12.5875 7.90416667,13.1625 8.2875,13.5458333 L10.2041667,15.4625 C10.3958333,15.6541667 10.6354167,15.75 10.875,15.75 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                    <path d="M10.875,15.75 C10.6354167,15.75 10.3958333,15.6541667 10.2041667,15.4625 L8.2875,13.5458333 C7.90416667,13.1625 7.90416667,12.5875 8.2875,12.2041667 C8.67083333,11.8208333 9.29375,11.8208333 9.62916667,12.2041667 L10.875,13.45 L14.0375,10.2875 C14.4208333,9.90416667 14.9958333,9.90416667 15.3791667,10.2875 C15.7625,10.6708333 15.7625,11.2458333 15.3791667,11.6291667 L11.5458333,15.4625 C11.3541667,15.6541667 11.1145833,15.75 10.875,15.75 Z" fill="#000000" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                        <!--end::Icon-->
+                                        <!--begin::Content-->
+                                        <div class="d-flex flex-column">
+                                            <!--begin::Title-->
+                                            <h1 class="text-gray-800 fw-bold">{{t.title}}</h1>
+                                            <!--end::Title-->
+                                            <!--begin::Info-->
+                                            <div class="">
+                                                <!--begin::Label-->
+                                                <span class="fw-bold text-muted me-6">
+                                                    Dept:
+                                                    <a href="#" class="text-success text-hover-primary">{{t.department}}</a>
+                                                </span>
+                                                <!--end::Label-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bold text-muted me-6">
+                                                    Assigned to:
+                                                    <span ng-repeat="s in UsersList | filter:userById20('id',t.assignedUser)">
+                                                        <a target="_blank" href="#!/teamDetails/{{s.id}}" class="text-success text-hover-primary">{{s.accName}}</a>
+                                                    </span>
+                                                </span>
+                                                <!--end::Label-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bold text-muted me-6">
+                                                    Status:
+                                                    <span class="fw-bolder text-success me-1">{{t.status}}</span>
+                                                </span>
+                                                <!--end::Label-->
+                                                <!--begin::Label-->
+                                                <span class="fw-bold text-muted">
+                                                    Created:
+                                                    <span class="fw-bolder text-success me-1">{{t.date | date}}</span>
+                                                </span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Details-->
+                                    <div class="mb-15">
+                                        <!--begin::Description-->
+                                        <div class="mb-15 fs-5 fw-normal text-gray-800">
+                                            {{t.body}}
+                                        </div>
+                                        <!--end::Description-->
+                                        <div class="symbol symbol-50px me-5">
+                                            <label class="fs-6 fw-bold mb-2">Attachment</label><br/>
+                                            <a href="../UploadedFiles/{{t.fileName}}" target="_blank">
+                                                <img class="w-100px" src="../UploadedFiles/{{t.fileName}}" alt="attachment">
+                                            </a>
+                                        </div>
+                                        <!--begin::Row-->
+                                        <div class="row my-7">
+                                            <!--begin::Col-->
+                                            <div class="col-sm-8 fv-row mb-3">
+                                                <label class="fs-6 fw-bold mb-2">Reply By</label>
+                                                <input type="text" class="form-control form-control-solid" placeholder="Enter your name" name="replyBy" ng-model="t.replyBy">
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col-sm-4 fv-row mb-3">
+                                                <label class="fs-6 fw-bold mb-2">Status</label>
+                                                <select class="form-select form-select-solid" data-placeholder="Status" data-hide-search="true" id="status" ng-model="t.status">
+                                                    <option value="Open">Open</option>
+                                                    <option value="Onhold">On Hold</option>
+                                                    <option value="Resolved">Resolved</option>
+                                                    <option value="Closed">Closed</option>
+                                                </select>
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                        <input type="number" name="ticketsId" ng-model="t.ticketsId" class="d-none"/>
+                                        <!--begin::Input group-->
+                                        <div class="mb-0">
+                                            <textarea id="replyBody" class="form-control form-control-solid placeholder-gray-600 fw-bolder fs-4 ps-9 pt-7" rows="6" name="reply" placeholder="Reply ticket" ng-model="t.replyBody"></textarea>
+                                            <!--begin::Submit-->
+                                            <button type="button" class="btn btn-primary mt-n20 mb-20 position-relative float-end me-7" ng-click="replyTicket()">Reply</button>
+                                            <!--end::Submit-->
+                                        </div>
+                                        <!--end::Input group-->
+
+                                    </div>
+                                    <!--end::Details-->
+                                </form>
+                                <!--begin::Comments-->
+
+                                <div class="mb-15">
+
+                                    <!--begin::Comment-->
+                                    <div class="mb-9" ng-repeat="tr in tReply | orderBy:'ticketRepliesId':true | filter: tReplyById('ticketsId',tid2)">
+                                        <!--begin::Card-->
+                                        <div class="card card-bordered w-100">
+                                            <!--begin::Body-->
+                                            <div class="card-body">
+                                                <!--begin::Wrapper-->
+                                                <div class="w-100 d-flex flex-stack mb-8">
+                                                    <!--begin::Container-->
+                                                    <div class="d-flex align-items-center f">
+                                                        <!--begin::Author-->
+                                                        <div class="symbol symbol-50px me-5">
+                                                            <div class="symbol-label fs-1 fw-bolder bg-light-success text-success">{{tr.replyBy.charAt(0)}}</div>
+                                                        </div>
+                                                        <!--end::Author-->
+                                                        <!--begin::Info-->
+                                                        <div class="d-flex flex-column fw-bold fs-5 text-gray-600 text-dark">
+                                                            <!--begin::Text-->
+                                                            <div class="d-flex align-items-center">
+                                                                <!--begin::Username-->
+                                                                <span class="text-primary fw-bolder text-hover-warning fs-5 me-3">{{tr.replyBy}}</span>
+                                                                <!--end::Username-->
+                                                                <span class="m-0"></span>
+                                                            </div>
+                                                            <!--end::Text-->
+                                                            <!--begin::Date-->
+                                                            <span class="text-muted fw-bold fs-6">2 Days ago</span>
+                                                            <!--end::Date-->
+                                                        </div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Container-->
+                                                    <!--begin::Actions-->
+                                                    <div class="m-0">
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Wrapper-->
+                                                <!--begin::Desc-->
+                                                <p class="fw-normal fs-5 text-gray-700 m-0">
+                                                    {{tr.replyBody}}
+                                                </p>
+                                                <!--end::Desc-->
+                                            </div>
+                                            <!--end::Body-->
+                                        </div>
+                                        <!--end::Card-->
+                                    </div>
+                                    <!--end::Comment-->
+
+                                </div>
+                                <!--end::Comments-->
+
+                            </div>
+                            <!--end::Ticket view-->
+                        </div>
+                        <!--end::Content-->
+                        <!--begin::Sidebar-->
+                        <div class="flex-column flex-lg-row-auto w-100 mw-lg-300px mw-xxl-350px">
+                            <!--begin::Search-->
+                            <div class="position-relative mb-15">
+                                <!--begin::Svg Icon | path: icons/duotone/General/Search.svg-->
+                                <span class="svg-icon svg-icon-1 svg-icon-primary position-absolute top-50 translate-middle ms-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                                <input type="text" class="form-control form-control-lg form-control-solid ps-14" name="search" value="" placeholder="Search" />
+                            </div>
+                            <!--end::Search-->
+                            <!--begin::More channels-->
+                            <div class="card-rounded bg-primary bg-opacity-5 p-10 mb-15">
+                                <!--begin::Title-->
+                                <h2 class="text-dark fw-bolder mb-11">More Channels</h2>
+                                <!--end::Title-->
+                                <!--begin::Item-->
+                                <div class="d-flex align-items-center mb-10">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-file-earmark-text text-primary fs-1 me-5"></i>
+                                    <!--end::SymIconbol-->
+                                    <!--begin::Info-->
+                                    <div class="d-flex flex-column">
+                                        <h5 class="text-gray-800 fw-bolder">Project Briefing</h5>
+                                        <!--begin::Section-->
+                                        <div class="fw-bold">
+                                            <!--begin::Desc-->
+                                            <span class="text-muted">Check out our</span>
+                                            <!--end::Desc-->
+                                            <!--begin::Link-->
+                                            <a href="#" class="link-primary">Support Policy</a>
+                                            <!--end::Link-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                                <!--end::Item-->
+                                <!--begin::Item-->
+                                <div class="d-flex align-items-center mb-10">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-chat-square-text-fill text-primary fs-1 me-5"></i>
+                                    <!--end::SymIconbol-->
+                                    <!--begin::Info-->
+                                    <div class="d-flex flex-column">
+                                        <h5 class="text-gray-800 fw-bolder">More to discuss?</h5>
+                                        <!--begin::Section-->
+                                        <div class="fw-bold">
+                                            <!--begin::Desc-->
+                                            <span class="text-muted">Email us to</span>
+                                            <!--end::Desc-->
+                                            <!--begin::Link-->
+                                            <a href="#" class="link-primary">support@keenthemes.com</a>
+                                            <!--end::Link-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                                <!--end::Item-->
+                                <!--begin::Item-->
+                                <div class="d-flex align-items-center mb-10">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-twitter text-primary fs-1 me-5"></i>
+                                    <!--end::SymIconbol-->
+                                    <!--begin::Info-->
+                                    <div class="d-flex flex-column">
+                                        <h5 class="text-gray-800 fw-bolder">Latest News</h5>
+                                        <!--begin::Section-->
+                                        <div class="fw-bold">
+                                            <!--begin::Desc-->
+                                            <span class="text-muted">Follow us at</span>
+                                            <!--end::Desc-->
+                                            <!--begin::Link-->
+                                            <a href="#" class="link-primary">KeenThemes Twitter</a>
+                                            <!--end::Link-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                                <!--end::Item-->
+                                <!--begin::Item-->
+                                <div class="d-flex align-items-center">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-github text-primary fs-1 me-5"></i>
+                                    <!--end::SymIconbol-->
+                                    <!--begin::Info-->
+                                    <div class="d-flex flex-column">
+                                        <h5 class="text-gray-800 fw-bolder">Github Access</h5>
+                                        <!--begin::Section-->
+                                        <div class="fw-bold">
+                                            <!--begin::Desc-->
+                                            <span class="text-muted">Our github repo</span>
+                                            <!--end::Desc-->
+                                            <!--begin::Link-->
+                                            <a href="#" class="link-primary">KeenThemes Github</a>
+                                            <!--end::Link-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                                <!--end::Item-->
+                            </div>
+                            <!--end::More channels-->
+                        </div>
+                        <!--end::Sidebar-->
+                    </div>
+                    <!--end::Layout-->
+                </div>
+                <!--end::Card body-->
+            </div>
+            <!--end::Card-->
+            
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+
